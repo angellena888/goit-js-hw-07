@@ -20,19 +20,6 @@ gallery.addEventListener('click', onGalleryClick);
 
 function onGalleryClick(event) {
   event.preventDefault();
-
-  const imageEl = event.target.nodeName === 'IMG';
-  if (!imageEl) {
-    return;
-  }
-
-  const largeImageUrl = event.target.dataset.source;
-
-  function onCloseModal(event) {
-    if (event.code === 'Escape') {
-      instance.close();
-    }
-  }
 }
 
 const lightbox = new SimpleLightbox('.gallery a', {
